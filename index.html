@@ -128,54 +128,6 @@
         footer .social-icons {
             margin-top: 20px;
         }
-
-        /* Estilos do Quiz */
-        .quiz-container {
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 15px;
-            padding: 20px;
-            max-width: 600px;
-            margin: 20px auto;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-        }
-
-        .quiz-container h2 {
-            color: #ffcc00;
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
-
-        .question {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .options label {
-            display: block;
-            margin-bottom: 10px;
-            color: #f5f5f5;
-        }
-
-        .submit-btn {
-            background-color: #ffcc00;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-
-        .submit-btn:hover {
-            background-color: #ff6600;
-        }
-
-        .result {
-            font-size: 24px;
-            color: #ffcc00;
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
@@ -189,6 +141,7 @@
             <li><a href="personagens.html">Personagens</a></li>
             <li><a href="episodios.html">Temporadas</a></li>
             <li><a href="curiosidades.html">Curiosidades</a></li>
+            <li><a href="quiz.html">Quiz</a></li> <!-- Link para a página do Quiz -->
         </ul>
     </nav>
 
@@ -217,44 +170,6 @@
             <a href="https://www.facebook.com/seuFacebook" target="_blank"><img src="face.png" alt="Facebook"></a>
         </div>
 
-        <!-- Quiz -->
-        <div class="quiz-container">
-            <h2>Teste seus conhecimentos sobre Supernatural!</h2>
-
-            <form id="quizForm">
-                <div class="question">
-                    <label>Qual é o nome do Impala de Dean Winchester?</label>
-                    <div class="options">
-                        <label><input type="radio" name="q1" value="1"> Baby</label>
-                        <label><input type="radio" name="q1" value="2"> Beast</label>
-                        <label><input type="radio" name="q1" value="3"> Bessie</label>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <label>Quem interpretou o anjo Castiel?</label>
-                    <div class="options">
-                        <label><input type="radio" name="q2" value="1"> Misha Collins</label>
-                        <label><input type="radio" name="q2" value="2"> Jared Padalecki</label>
-                        <label><input type="radio" name="q2" value="3"> Jensen Ackles</label>
-                    </div>
-                </div>
-
-                <div class="question">
-                    <label>Qual é o nome da mãe dos irmãos Winchester?</label>
-                    <div class="options">
-                        <label><input type="radio" name="q3" value="1"> Mary</label>
-                        <label><input type="radio" name="q3" value="2"> Lisa</label>
-                        <label><input type="radio" name="q3" value="3"> Ellen</label>
-                    </div>
-                </div>
-
-                <button type="button" class="submit-btn" onclick="checkAnswers()">Submeter Respostas</button>
-            </form>
-
-            <div id="result" class="result"></div>
-        </div>
-
     </main>
 
     <footer>
@@ -264,22 +179,6 @@
             <a href="https://twitter.com/bberryanney/" target="_blank"><img src="x.png" alt="Twitter"></a>
         </div>
     </footer>
-
-    <script>
-        function checkAnswers() {
-            let score = 0;
-            const q1 = document.querySelector('input[name="q1"]:checked');
-            const q2 = document.querySelector('input[name="q2"]:checked');
-            const q3 = document.querySelector('input[name="q3"]:checked');
-
-            if (q1 && q1.value === "1") score++;
-            if (q2 && q2.value === "1") score++;
-            if (q3 && q3.value === "1") score++;
-
-            const resultDiv = document.getElementById("result");
-            resultDiv.innerHTML = "Você acertou " + score + " de 3 perguntas!";
-        }
-    </script>
 
 </body>
 </html>
