@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagens de Supernatural</title>
+    <style>
+        body {
+            background-color: #63411f;
+            color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffcc00;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid #ffcc00;
+            background-color: #444;
+            color: #fff;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #ffcc00;
+            box-shadow: 0 0 5px #ffcc00;
+        }
+
+        ul.personagens {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #ffcc00;
+            font-size: 18px;
+        }
+
+        ul.personagens li {
+            margin-bottom: 12px;
+        }
+
+        ul.personagens li a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        ul.personagens li a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px #ff0000;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #ffcc00;
+            border-top: 2px solid #444;
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            text-shadow: 0 0 5px #ff0000;
+        }
+
+        footer img {
+            border: none;
+            box-shadow: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        
+        .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+  .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+
+        .curiosidades ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #444;
+            text-align: center;
+            color: #ffcc00;
+            padding: 20px;
+            margin-top: 30px;
+            font-family: 'Georgia', serif;
+            border-top: 2px solid #ffcc00;
+        }
+
+        footer p {
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 0 0 5px #ff0000;
+        }
+
+        footer .social-icons {
+            margin-top: 20px;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        footer .social-icons a img {
+            width: 40px;
+        }
+
+        footer .social-icons a:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Personagens de Supernatural</h2>
+        <input type="text" id="busca" placeholder="Buscar personagem" oninput="filtrarPersonagens()">
+        <ul class="personagens" id="personagens-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/sam-winchester.html">Sam Winchester</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/dean-winchester.html">Dean Winchester</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/castiel.html">Castiel</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/lucifer.html">Lucifer</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/deus.html">Deus</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/chuck.html">Chuck</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/amara.html">Amara</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/jack.html">Jack</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/rowena.html">Rowena</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/gabriel.html">Gabriel</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/brincalhao.html">Brincalhão</a></li>
+
+            <li><a href="file:///D:/meu%20site%20ricardo/crowley.html">Crowley</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/Mary.html">Mary Winchester</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/john1.html">John Winchester</a></li>
+            <li><a href="file:///D:/meu%20site%20ricardo/bobby.html">Bobby</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p><strong>ᎯᎯꭆ 2024 Meu Site de Supernatural</strong></p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/anneanjss/" target="_blank"><img src="insta.png" alt="Instagram"></a>
+            <a href="https://twitter.com/bberryanney/" target="_blank"><img src="x.png" alt="Twitter"></a>
+        </div>
+    </footer>
+
+    <script>
+        function filtrarPersonagens() {
+            let input = document.getElementById('busca');
+            let filter = input.value.toLowerCase();
+            let ul = document.getElementById('personagens-list');
+            let li = ul.getElementsByTagName('li');
+            
+            for (let i = 0; i < li.length; i++) {
+                let a = li[i].getElementsByTagName('a')[0];
+                let textValue = a.textContent || a.innerText;
+                if (textValue.toLowerCase().indexOf(filter) > -1) {
+                    li[i].style.display = '';
+                } else {
+                    li[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
